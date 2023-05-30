@@ -265,7 +265,8 @@ class IAMManager:
 def cli(ctx):
     aws_session = AWSSession()
     session = aws_session.get_session()
-    ctx.obj = IAMManager(session)
+    obj = IAMManager(session)
+    ctx.obj = obj
 
 @cli.command()
 @click.option('--user', help='Username')
