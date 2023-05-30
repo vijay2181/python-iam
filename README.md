@@ -2,6 +2,12 @@
 
 ## load the Environment
 
+
+```
+please note that the ctx argument is commonly used in Click command-line interfaces to pass around contextual information or share data between commands. It's generally good practice to define and use the ctx argument if you intend to utilize it in your command-line interface.
+By adding @click.pass_context decorator to the cli() function, Click will automatically pass the click.Context object as the first argument (ctx) to the function. Then, you can set ctx.obj to the obj variable, allowing you to access it within your subcommands using ctx.obj.
+```
+
 ```bash
 source profile.sh
 ```
